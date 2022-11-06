@@ -15,7 +15,7 @@ window.onload = () =>{
     let counter = document.querySelector('#target');
     let sound = new Audio('../assets/pop.mp3');
 
-    if (getCookie('fixScore') == 'yes') {
+    if (String(getCookie('fixScore')) == 'yes') {
       score = 0
     }
     else {
@@ -89,7 +89,7 @@ function deleteCookie(cname) {
     document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
-function fixScore(){
-    setCookie('fixScore', 'yes', '9999999999999999999999');
+function fixScore(input){
+    setCookie('fixScore', input, '9999999999999999999999');
     location.reload();
 }
