@@ -1,3 +1,0 @@
----
-permalink: /html/index.html
----
