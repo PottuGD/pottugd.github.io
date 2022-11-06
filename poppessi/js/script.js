@@ -15,11 +15,11 @@ window.onload = () =>{
     let counter = document.querySelector('#target');
     let sound = new Audio('../assets/pop.mp3');
 
-    if (getCookie('fixScore') == 'false') {
-      var score = parseInt(getCookie("score"));
+    if (getCookie('fixScore') == 'yes') {
+      score = 0
     }
     else {
-      var score = 0;
+      var score = parseInt(getCookie("score"));
     }
     
     addToCounter()
@@ -90,5 +90,6 @@ function deleteCookie(cname) {
 }
 
 function fixScore(){
-    setCookie('fixScore', 'true', '9999999999999999999999');
+    setCookie('fixScore', 'yes', '9999999999999999999999');
+    location.reload();
 }
