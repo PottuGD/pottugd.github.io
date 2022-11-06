@@ -22,6 +22,10 @@ window.onload = () =>{
       var score = parseInt(getCookie("score"));
     }
     
+    if (score == NaN) {
+      score = 0;
+    }
+
     addToCounter()
 
     console.log('Hi! You found me :)')
