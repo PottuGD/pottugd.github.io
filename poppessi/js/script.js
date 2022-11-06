@@ -14,8 +14,14 @@ window.onload = () =>{
     let img = document.querySelector('#poppessi1');
     let counter = document.querySelector('#target');
     let sound = new Audio('../assets/pop.mp3');
-    var score = parseInt(getCookie("score"));
 
+    if (getCookie('fixScore') == 'false') {
+      var score = parseInt(getCookie("score"));
+    }
+    else {
+      var score = 0;
+    }
+    
     addToCounter()
 
     console.log('Hi! You found me :)')
@@ -81,4 +87,8 @@ function getCookie(cname) {
 
 function deleteCookie(cname) {
     document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+function fixScore(){
+    setCookie('fixScore', 'true', '9999999999999999999999');
 }
