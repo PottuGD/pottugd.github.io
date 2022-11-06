@@ -22,7 +22,7 @@ window.onload = () =>{
       var score = parseInt(getCookie("score"));
     }
     
-    if (score == NaN || score == Infinity || score == -Infinity || score == 'NaN' || counter == 'NaN') {
+    if (isNaN(score)) {
       score = 0;
       console.log('score was NaN: score = 0');
     }
