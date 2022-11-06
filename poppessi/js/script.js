@@ -23,7 +23,7 @@ window.onload = () =>{
     }
     
     if (isNaN(score)) {
-      score = 0;
+      score = -0;
       console.log('score was NaN: score = 0');
     }
 
