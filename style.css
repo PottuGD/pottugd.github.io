@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,700,800");
+
+body {
+    background-color: #24344c;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-family: "Dosis", sans-serif;
+    font-size: 100px;
+    margin-bottom: 0px;
+    font-weight: 800;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-family: Dosis, sans-serif;
+    margin-bottom: 0px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+a {
+    text-align: center;
+    color: rgb(57, 104, 207);
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
