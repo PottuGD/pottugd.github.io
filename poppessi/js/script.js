@@ -14,7 +14,7 @@ window.onload = () =>{
     let img = document.querySelector('#poppessi1');
     let counter = document.querySelector('#target');
     let sound = new Audio('../assets/pop.mp3');
-    var score = parseInt(getCookie("score"));
+    var score = 0 //parseInt(getCookie("score"));
 
     addToCounter()
 
