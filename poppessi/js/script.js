@@ -1,14 +1,3 @@
-const ClientJS = window.ClientJS;
-
-// Create a new ClientJS object
-const client = new ClientJS();
-
-// Get the client's fingerprint id
-const fingerprint = client.getDevice();
-
-// set cookie for the fingerprint
-setCookie('uid', fingerprint, '9999999999999999999999');
-
 window.onload = () =>{
     var mouseIsDown = false;
     let img = document.querySelector('#poppessi1');
