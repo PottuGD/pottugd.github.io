@@ -33,6 +33,7 @@ window.onload = () =>{
     img.addEventListener('mousedown', ()=> {
         mouseIsDown = true;
         img.src = '../assets/poppessi2.png';
+        img.setAttribute('draggable', 'false')
         sound.play();
         addToCounter();
         setCookie('score', score - 1, '9999999999999999999999');
@@ -43,6 +44,7 @@ window.onload = () =>{
             // mouse was held down for 5 seconds
             img.src = '../assets/favicon.ico';
             img.setAttribute('class', 'rotate');
+            img.setAttribute('draggable', 'false')
 
           }
         }, 5000);
@@ -51,6 +53,7 @@ window.onload = () =>{
         mouseIsDown = false;
         img.src = '../assets/poppessi1.png';
         img.setAttribute('class', 'nothing');
+        img.setAttribute('draggable', 'false')
         counter.setAttribute('class', 'nothing');
         
     })
