@@ -22,8 +22,9 @@ window.onload = () =>{
       var score = parseInt(getCookie("score"));
     }
     
-    if (score == NaN) {
+    if (score == NaN || score == Infinity || score == -Infinity || score == 'NaN' || counter == 'NaN') {
       score = 0;
+      console.log('score was NaN: score = 0');
     }
 
     addToCounter()
@@ -63,6 +64,11 @@ window.onload = () =>{
         counter.innerHTML = score;
         // TODO: scale and rotate score when clicked
         counter.setAttribute('class', 'scale');
+
+        if (score == NaN || score == Infinity || score == -Infinity || score == 'NaN' || counter == 'NaN') {
+          score = 0;
+          console.log('score was NaN: score = 0');
+        }
         
     }
 }
