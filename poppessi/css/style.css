@@ -1,37 +1,103 @@
 *{
-    transition: all 0.6s;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    
 }
 
-html {
-    height: 100%;
+.selector {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 body{
-    font-family: 'Lato', sans-serif;
-    color: #888;
-    margin: 0;
-}
-
-#main{
-    display: table;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #ffefba, #ffffff);
     width: 100%;
     height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+}
+.container h1{
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 10px 0;
+    -webkit-text-stroke: 3px #000;
+    color: #fff;
+}
+.container p{
+    font-size: 100px;
+    -webkit-text-stroke: 3px #000;
+    color: #fff;
+    
+    animation-duration: .3s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
 }
 
-.fof{
-	  display: table-cell;
-	  vertical-align: middle;
+h1{
+    font-size: 6.5em;
+    margin: 1% 0% -5% 0%;
+    font-family: Nunito, sans-serif;
+    -webkit-text-stroke: 2px black;
+    color: white;
 }
 
-.fof h1{
-	  font-size: 50px;
-	  display: inline-block;
-	  padding-right: 12px;
-	  animation: type .5s alternate infinite;
+#country_score{
+    margin-left: 50px;
+}
+#score{
+    font-size: 4em;
+    font-family: Nunito, sans-serif;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    margin-bottom: -6%;
 }
 
-@keyframes type{
-	  from{box-shadow: inset -3px 0px 0px #888;}
-	  to{box-shadow: inset -3px 0px 0px transparent;}
+
+.scale {
+    animation: fadeAndScale 1s ease alternate ease-in-out;
+}
+
+@keyframes fadeAndScale {
+    
+    from {
+        opacity: 0;
+        transform: scale(.9, .9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+
+.rotate {
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+@font-face {
+    font-family: "PopFat";
+    src: url("../fonts/subset-Nunito-Black.4fb0eeff.ttf");
 }
