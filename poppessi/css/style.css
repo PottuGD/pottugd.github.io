@@ -6,6 +6,12 @@
     
 }
 
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 body{
     font-family: sans-serif;
     background: linear-gradient(to right, #ffefba, #ffffff);
