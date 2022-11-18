@@ -1,8 +1,8 @@
 window.onload = () =>{
 
 
-    if (/Android|iPhone/i.test(navigator.userAgent)) {
-        location.replace("../../poppessi_m/html");
+    if (!/Android|iPhone/i.test(navigator.userAgent)) {
+        location.replace("../../poppessi/html");
     }
 
     var mouseIsDown = false;

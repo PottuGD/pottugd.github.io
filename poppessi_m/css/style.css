@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.container h1{
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 10px 0;
+    -webkit-text-stroke: 3px #000;
+    color: #fff;
+}
+.container p{
+    font-size: 100px;
+    -webkit-text-stroke: 3px #000;
+    color: #fff;
+    
+    animation-duration: .3s;
+    animation-name: fadeAndScale;
+    animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+}
+
+h1{
+    font-size: 6.5em;
+    margin: 1% 0% -5% 0%;
+    font-family: Nunito, sans-serif;
+    -webkit-text-stroke: 2px black;
+    color: white;
+}
+
+#country_score{
+    margin-left: 50px;
+}
+#score{
+    font-size: 4em;
+    font-family: Nunito, sans-serif;
+    -webkit-text-stroke: 2px black;
+    color: white;
+    margin-bottom: -6%;
+}
+
+
+.scale {
+    animation: fadeAndScale 1s ease alternate ease-in-out;
+}
+
+@keyframes fadeAndScale {
+    
+    from {
+        opacity: 0;
+        transform: scale(.9, .9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+
+.rotate {
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+@font-face {
+    font-family: "PopFat";
+    src: url("../fonts/subset-Nunito-Black.4fb0eeff.ttf");
+}
