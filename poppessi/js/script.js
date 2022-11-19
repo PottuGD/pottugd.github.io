@@ -26,7 +26,7 @@ window.onload = () =>{
 
     console.log('Hi! You found me :)')
 
-    img.addEventListener('touchstart', ()=> {
+    img.addEventListener('mousedown', ()=> {
         mouseIsDown = true;
         img.src = '../assets/poppessi2.png';
         img.setAttribute('draggable', 'false')
@@ -46,7 +46,7 @@ window.onload = () =>{
         }, 5000);
     })
 
-    img.addEventListener('touchend', ()=> {
+    img.addEventListener('mouseup', ()=> {
         mouseIsDown = false;
         img.src = '../assets/poppessi1.png';
         img.setAttribute('class', 'nothing');
