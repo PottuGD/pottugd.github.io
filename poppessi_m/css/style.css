@@ -47,6 +47,7 @@ body{
 h1{
     font-size: 6.5em;
     margin: 1% 0% -5% 0%;
+    margin: auto;
     font-family: Nunito, sans-serif;
     -webkit-text-stroke: 2px black;
     color: white;
@@ -63,6 +64,14 @@ h1{
     margin-bottom: -6%;
 }
 
+.PopPessi {
+    width: 490px;
+    height: 640px;
+
+    background-image: url('../assets/poppessi1.png');
+    background-position: bottom 100px center;
+    background-repeat: no-repeat;
+}
 
 .scale {
     animation: fadeAndScale 1s ease alternate ease-in-out;

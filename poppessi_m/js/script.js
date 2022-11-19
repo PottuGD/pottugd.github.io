@@ -6,7 +6,7 @@ window.onload = () =>{
     }
 
     var mouseIsDown = false;
-    let img = document.querySelector('#poppessi1');
+    let img = document.querySelector('#PopPessi');
     let counter = document.querySelector('#target');
     let sound = new Audio('../assets/pop.mp3');
 
@@ -26,9 +26,9 @@ window.onload = () =>{
 
     console.log('Hi! You found me :)')
 
-    img.addEventListener('mousedown', ()=> {
+    img.addEventListener('touchstart', ()=> {
         mouseIsDown = true;
-        img.src = '../assets/poppessi2.png';
+        img.setAttribute("style", "background-image: url('../assets/poppessi2.png'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat;");
         img.setAttribute('draggable', 'false')
         sound.play();
         addToCounter();
@@ -38,16 +38,16 @@ window.onload = () =>{
         setTimeout(function() {
           if(mouseIsDown) {
             // mouse was held down for 5 seconds
-            img.src = '../assets/favicon.ico';
+            img.setAttribute("style", "background-image: url('../assets/favicon.ico'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat;");
             img.setAttribute('class', 'rotate');
             img.setAttribute('draggable', 'false')
 
           }
         }, 5000);
     })
-    img.addEventListener('mouseup', ()=> {
+    img.addEventListener('touchend', ()=> {
         mouseIsDown = false;
-        img.src = '../assets/poppessi1.png';
+        img.setAttribute("style", "background-image: url('../assets/poppessi1.png'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat;");
         img.setAttribute('class', 'nothing');
         img.setAttribute('draggable', 'false')
         counter.setAttribute('class', 'nothing');
