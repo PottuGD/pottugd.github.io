@@ -57,7 +57,6 @@ window.onload = () =>{
     function addToCounter(){        
         score++;
         counter.innerHTML = score;
-        // TODO: scale and rotate score when clicked
         counter.setAttribute('class', 'scale');
 
         if (score == NaN || score == Infinity || score == -Infinity || score == 'NaN' || counter == 'NaN') {

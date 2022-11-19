@@ -64,6 +64,12 @@ h1{
     margin-bottom: -6%;
 }
 
+#PopPessiTxt {
+    text-align: center;
+    width: 90vw;
+    height: auto
+}
+
 .PopPessi {
     width: 490px;
     height: 640px;
