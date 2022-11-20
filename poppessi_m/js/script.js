@@ -51,7 +51,7 @@ window.onload = () =>{
         img.setAttribute('class', 'nothing');
         img.setAttribute('draggable', 'false');
         counter.setAttribute('class', 'nothing');
-        
+        clearTimeout();
     })
 
     function addToCounter(){        
