@@ -1,3 +1,5 @@
+var score
+
 window.onload = () =>{
 
 
@@ -6,15 +8,15 @@ window.onload = () =>{
     }
 
     var mouseIsDown = false;
-    let img = document.querySelector('#poppessi1');
+    let img = document.querySelector('#PopPessi');
     let counter = document.querySelector('#target');
     let sound = new Audio('../assets/pop.mp3');
 
     if (String(getCookie('fixScore')) == 'yes') {
-      score = 0
+      score = -1;
     }
     else {
-      var score = parseInt(getCookie("score"));
+      var score = parseInt(getCookie('score'));
     }
     
     if (isNaN(score)) {
@@ -28,19 +30,19 @@ window.onload = () =>{
 
     img.addEventListener('mousedown', ()=> {
         mouseIsDown = true;
-        img.src = '../assets/poppessi2.png';
+        img.setAttribute("style", "background-image: url('../assets/poppessi2.png'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat; background-size: 490px auto;");
         img.setAttribute('draggable', 'false')
         sound.play();
         addToCounter();
-        setCookie('score', score - 1, '9999999999999999999999');
+        
         
 
         setTimeout(function() {
           if(mouseIsDown) {
             // mouse was held down for 5 seconds
-            img.src = '../assets/favicon.ico';
+            img.setAttribute("style", "background-image: url('../assets/favicon.ico'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat; background-size: 420px auto;");
             img.setAttribute('class', 'rotate');
-            img.setAttribute('draggable', 'false')
+            img.setAttribute('draggable', 'false');
 
           }
         }, 5000);
@@ -48,19 +50,19 @@ window.onload = () =>{
 
     img.addEventListener('mouseup', ()=> {
         mouseIsDown = false;
-        img.src = '../assets/poppessi1.png';
+        img.setAttribute("style", "background-image: url('../assets/poppessi1.png'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat; background-size: 490px auto;");
         img.setAttribute('class', 'nothing');
-        img.setAttribute('draggable', 'false')
+        img.setAttribute('draggable', 'false');
         counter.setAttribute('class', 'nothing');
-        
     })
 
     function addToCounter(){        
         score++;
         counter.innerHTML = score;
         counter.setAttribute('class', 'scale');
+        setCookie('score', score, '9999999999999999999999');
 
-        if (score == NaN || score == Infinity || score == -Infinity || score == 'NaN' || counter == 'NaN') {
+        if (isNaN(score)) {
           score = 0;
           console.log('score was NaN: score = 0');
         }
@@ -96,7 +98,6 @@ function getCookie(cname) {
 function deleteCookie(cname) {
     document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
-
 
 /*
 

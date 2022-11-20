@@ -40,7 +40,7 @@ body{
     color: #fff;
     
     animation-duration: .3s;
-    animation-name: fadeAndScale;
+    animation-name: scale;
     animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
 }
 
@@ -65,17 +65,25 @@ h1{
 
 
 .scale {
-    animation: fadeAndScale 1s ease alternate ease-in-out;
+    animation: scale 1s ease alternate ease-in-out;
 }
 
-@keyframes fadeAndScale {
+.PopPessi {
+    width: 501px;
+    height: 640px;
+
+    background-image: url('../assets/poppessi1.png');
+    background-position: bottom 100px center;
+    background-repeat: no-repeat;
+    background-size: 490px auto;
+}
+
+@keyframes scale {
     
     from {
-        opacity: 0;
         transform: scale(.9, .9);
     }
     to {
-        opacity: 1;
         transform: scale(1, 1);
     }
 }

@@ -38,9 +38,9 @@ window.onload = () =>{
         setTimeout(function() {
           if(mouseIsDown) {
             // mouse was held down for 5 seconds
-            img.setAttribute("style", "background-image: url('../assets/favicon.ico'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat;");
+            img.setAttribute("style", "background-image: url('../assets/favicon.ico'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat; background-size: 420px auto;");
             img.setAttribute('class', 'rotate');
-            img.setAttribute('draggable', 'false')
+            img.setAttribute('draggable', 'false');
 
           }
         }, 5000);
@@ -49,7 +49,7 @@ window.onload = () =>{
         mouseIsDown = false;
         img.setAttribute("style", "background-image: url('../assets/poppessi1.png'); width: 490px; height: 640px; background-position: bottom 100px center; background-repeat: no-repeat;");
         img.setAttribute('class', 'nothing');
-        img.setAttribute('draggable', 'false')
+        img.setAttribute('draggable', 'false');
         counter.setAttribute('class', 'nothing');
         
     })
