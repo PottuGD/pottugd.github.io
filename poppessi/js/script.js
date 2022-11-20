@@ -16,7 +16,7 @@ window.onload = () =>{
       score = -1;
     }
     else {
-      var score = parseInt(getCookie('score'));
+      var score = parseInt(getCookie('score')) - 1;
     }
     
     if (isNaN(score)) {
