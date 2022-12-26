@@ -1,7 +1,7 @@
 window.onload = () =>{
 
 
-    if (!/Android|iPhone/i.test(navigator.userAgent)) {
+    if (!/Android|iPhone|iPad/i.test(navigator.userAgent)) {
         location.replace("../../poppessi/html");
     }
 
@@ -32,7 +32,7 @@ window.onload = () =>{
         img.setAttribute('draggable', 'false')
         sound.play();
         addToCounter();
-        setCookie('score', score - 1, '9999999999999999999999');
+        setCookie('score', score - 1, '7');
         
 
         setTimeout(function() {
