@@ -3,7 +3,7 @@ var score
 window.onload = () =>{
 
 
-    if (/Android|iPhone/i.test(navigator.userAgent)) {
+    if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
         location.replace("../../poppessi_m/html");
     }
 
@@ -61,7 +61,7 @@ window.onload = () =>{
         score++;
         counter.innerHTML = score;
         counter.setAttribute('class', 'scale');
-        setCookie('score', score, '9999999999999999999999');
+        setCookie('score', score, '7');
 
         if (isNaN(score)) {
           score = 0;
